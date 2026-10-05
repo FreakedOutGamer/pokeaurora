@@ -1,0 +1,12 @@
+build/
+tools/agbcc/
+__pycache__/
+aurora_ticket.gba
+aurora_ticket.elf
+aurora_ticket.map
+# Built from graphics/*.png and *.pal
+*.1bpp
+*.4bpp
+*.8bpp
+*.gbapal
+!graphics/expired/palette.gbapal

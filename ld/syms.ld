@@ -1,0 +1,119 @@
+/* RAM variables of the Aurora Ticket cartridge, at their original addresses. */
+
+/* librfu */
+lman = 0x03001D48; /* the link manager (AgbRfu_LinkManager.c) */
+gRfuLsFixedCount = 0x030023F0;
+gRfuCidBak = 0x030023F8;
+gRfuSCStartFlag = 0x03002400;
+gRfuLinkEmergencyFlag = 0x03002404;
+gRfuSIO32Id = 0x03002408;
+gSTWIStatus = 0x03002500;
+gRfuSlotStatusUNI = 0x03002510;
+gRfuReserved = 0x03002520;
+gRfuSlotStatusNI = 0x03002530;
+gRfuLinkStatus = 0x03002540;
+gRfuStatic = 0x03002544;
+gRfuFixed = 0x03002548;
+
+/* siirtc */
+sDummy = 0x03002414;
+sLocked = 0x03002416;
+GPIOPortDirection = 0x080000C6;
+
+/* agb_flash */
+sTimerNum = 0x03002418;
+sTimerCount = 0x0300241A;
+sTimerReg = 0x0300241C;
+sSavedIme = 0x03002420;
+gFlashTimeoutFlag = 0x0300254C;
+PollFlashStatus = 0x03002550;
+ProgramFlashSector = 0x03002558;
+gFlash = 0x0300255C;
+gFlashMaxTime = 0x0300256C;
+
+/* libc: the heap's start (_sbrk), and errno (a common symbol, which the
+   original placed after the libraries' other common symbols) */
+end = 0x02038000;
+errno = 0x03002570;
+
+/* The game */
+sSectorDirty = 0x03000000;
+sSaveState = 0x03000010;
+gBgTilemap = 0x03000250;
+
+gOamBuffer = 0x03000750;
+gOamBuffer16 = 0x03000750;
+gOamBuffer32 = 0x03000750;
+gIntrTable = 0x03000014;
+gVBlankDone = 0x0300004C;
+gVBlankCounter = 0x0300004D;
+gIntrMainBuf = 0x03000050;
+gPreservedValue = 0x03000B58;
+gMainState = 0x03000B5C;
+gPrevMainState = 0x03000B5D;
+gMainStateChanged = 0x03000B5E;
+sRfuTimeoutCounters = 0x030019F0;
+sRfuPauseTimer = 0x030019F4;
+sRfuDisconnectTimer = 0x030019F5;
+sRfuGameDataTimer = 0x030019F6;
+sRfuIdleTimer = 0x030019F8;
+sRfuInitParam = 0x03001A00;
+gRfuSlots = 0x03001A18;
+gRfuBusy = 0x03001B48;
+gRfuState = 0x03001B49;
+gRfuPrevState = 0x03001B4A;
+gRfuConnected = 0x03001B4B;
+gRfuConnectedOld = 0x03001B4C;
+gRfuUnused1B4D = 0x03001B4D;
+gRfuLost = 0x03001B4E;
+gRfuDisconnectRequest = 0x03001B4F;
+gRfuAckSlots = 0x03001B50;
+gRfuSendSlot = 0x03001B51;
+gRfuGameName = 0x03001B58;
+gRfuUserName = 0x03001B68;
+gRfuUnusedBuffer = 0x03001B70;
+gRfuFatalError = 0x03001B85;
+gRfuRetransmit = 0x03001B86;
+gRfuDisconnectPending = 0x03001B87;
+gRfuAPIBuffer = 0x03000B60;
+gKeysHeld = 0x03000B50;
+gKeysNew = 0x03000B52;
+gKeysRepeat = 0x03000B54;
+sSaveTimer = 0x03001B88;
+gSlotData = 0x03001B90;
+sSlotCallbacks = 0x03001CE0;
+sSlotDebugCallbacks = 0x03001CF0;
+sSlotSerialNos = 0x03001D00;
+sSlotTimes = 0x03001D08;
+sSlotMaxTimes = 0x03001D10;
+sCurrentSlot = 0x03001D18;
+sDebugSlot = 0x03001D19;
+sDebugCursor = 0x03001D1A;
+sSaveRequested = 0x03001D1B;
+sDebugScreenActive = 0x03001D1C;
+sLastHour = 0x03001B8C;
+sSetupRtc = 0x03001D20;
+sSetupPage = 0x03001D2C;
+sSetupUnused = 0x03001D2D;
+sMainCursor = 0x03001D2E;
+sTimeCursor = 0x03001D2F;
+sAiCursor = 0x03001D30;
+sAiMode = 0x03001D31;
+sAiLevel = 0x03001D32;
+sAiPair = 0x03001D33;
+sTitleTimer = 0x03001D34;
+sKeyRepeatTimers = 0x03001D38;
+sCursorTarget = 0x03001D42;
+sCursorSpeed = 0x03001D43;
+sCursorVertical = 0x03001D44;
+gScreenHold = 0x03001D92;
+gAdapterError = 0x03001D94;
+gBg3ScrollY = 0x030023D8;
+gScreenState = 0x030023DC;
+gScreenAnimStep = 0x030023DD;
+gScreenAnimPage = 0x030023DE;
+gScreenAnimStopped = 0x030023DF;
+gScreenAnimTimer = 0x030023E0;
+gScreenFadeLevel = 0x030023E2;
+gMgWork = 0x030023E4;
+gCtrlWork = 0x030023E8;
